@@ -1,0 +1,16 @@
+<form [formGroup]="formGroup">
+  <div fxLayout="row" fxLayoutGap="20px">
+    <app-simple-input
+      label="USER.USERNAME"
+      formControlName="username"
+      [required]="true"
+    ></app-simple-input>
+    <app-simple-input
+      label="USER.PASSWORD"
+      formControlName="password"
+      type="password"
+      [required]="true"
+    ></app-simple-input>
+  </div>
+  <button mat-button type="submit">{{ "AUTH.LOGIN" | translate }}</button>
+</form>

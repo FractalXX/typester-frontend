@@ -1,0 +1,18 @@
+{
+  "COMMON": {
+    "BLANK_PAGE": "Üres oldal",
+    "ERROR": {
+      "REQUIRED": "Kötelezően kitöldenő mező!",
+      "MINLENGTH": "Legalább {{ requiredLength }} karakter megadása kötelező!"
+    }
+  },
+  "AUTH": {
+    "LOGIN": "Bejelentkezés",
+    "REGISTER": "Regisztráció"
+  },
+  "USER": {
+    "USERNAME": "Felhasználónév",
+    "PASSWORD": "Jelszó",
+    "EMAIL": "E-mail cím"
+  }
+}

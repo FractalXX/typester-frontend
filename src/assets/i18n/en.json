@@ -1,0 +1,18 @@
+{
+  "COMMON": {
+    "BLANK_PAGE": "Blank page",
+    "ERROR": {
+      "REQUIRED": "Required field.",
+      "MINLENGTH": "At least {{ requiredLength }} characters must be provided."
+    }
+  },
+  "AUTH": {
+    "LOGIN": "Login",
+    "REGISTER": "Register"
+  },
+  "USER": {
+    "USERNAME": "Username",
+    "PASSWORD": "Password",
+    "EMAIL": "E-mail address"
+  }
+}
