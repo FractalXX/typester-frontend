@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ApiService } from 'app/shared/services/api.service';
 import { Observable } from 'rxjs';
 import { BasicAuthDto } from '../dtos/basic-auth.dto';
 import { RegistrationDto } from '../dtos/registration.dto';
@@ -9,13 +9,13 @@ import { TokenDto } from '../dtos/token.dto';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private apiService: ApiService) {}
 
   login(data: BasicAuthDto): Observable<TokenDto> {
-    return this.httpClient.post<TokenDto>('/api/auth/login', data);
+    return this.apiService.post<TokenDto>('/auth', data);
   }
 
   register(data: RegistrationDto): Observable<void> {
-    return this.httpClient.post<void>('/api/auth/register', data);
+    return this.apiService.post<void>('/auth/register', data);
   }
 }
