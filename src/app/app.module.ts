@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { MainModule } from './main/main.module';
 import { SharedModule } from './shared/shared.module';
+import * as fromApp from './store/app.reducer';
 
 // TODO move somewhere else
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -26,7 +27,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot(fromApp.reducer, {}),
+    StoreModule.forFeature(fromApp.fromAppName, fromApp.reducer),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production,

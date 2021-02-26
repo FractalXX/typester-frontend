@@ -8,7 +8,15 @@
   },
   "AUTH": {
     "LOGIN": "Login",
-    "REGISTER": "Register"
+    "REGISTER": "Register",
+    "LOGIN_PAGE": {
+      "DESCRIPTION": "A typing game designed to learn fast typing.",
+      "DESCRIPTION_2": "Continue your journey.",
+      "WELCOME": "Welcome back!",
+      "SIGN_IN": "Sign in",
+      "FIRST_TIME": "First time here?",
+      "SIGN_UP": "Then let's start by signing up!"
+    }
   },
   "USER": {
     "USERNAME": "Username",

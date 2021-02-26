@@ -1,16 +1,52 @@
-<form [formGroup]="formGroup" (submit)="login()">
-  <div fxLayout="row" fxLayoutGap="20px">
-    <app-simple-input
-      label="USER.USERNAME"
-      formControlName="username"
-      [required]="true"
-    ></app-simple-input>
-    <app-simple-input
-      label="USER.PASSWORD"
-      formControlName="password"
-      type="password"
-      [required]="true"
-    ></app-simple-input>
+<div class="page-container">
+  <div class="card login" fxLayout="row" @fade>
+    <div class="welcome"
+      fxLayout="column"
+      fxLayoutAlign="space-between">
+      <div class="card-content">
+        <h1>Typedemon</h1>
+        <p>{{ 'AUTH.LOGIN_PAGE.DESCRIPTION' | translate }}</p>
+      </div>
+      <p class="welcome-back">{{ 'AUTH.LOGIN_PAGE.WELCOME' | translate }}</p>
+    </div>
+    <div class="login"
+      fxLayout="column"
+      fxLayoutAlign="space-between"
+      fxFlex="1 1 auto">
+      <div class="card-content">
+        <h2>{{ 'AUTH.LOGIN_PAGE.SIGN_IN' | translate }}</h2>
+        <p class="accent">{{ 'AUTH.LOGIN_PAGE.DESCRIPTION_2' | translate }}</p>
+        <form [formGroup]="formGroup" (submit)="login()">
+          <div fxLayout="column" fxLayoutGap="62px">
+            <app-simple-input
+              [appAutoFocus]="true"
+              label="USER.USERNAME"
+              formControlName="username"
+              icon="account_circle"
+              iconType="SUFFIX"
+              [required]="true"
+            ></app-simple-input>
+            <app-simple-input
+              label="USER.PASSWORD"
+              formControlName="password"
+              icon="lock"
+              iconType="SUFFIX"
+              type="password"
+              [required]="true"
+            ></app-simple-input>
+          </div>
+          <button class="login-button"
+            mat-stroked-button
+            color="primary"
+            type="submit">
+            {{ 'AUTH.LOGIN' | translate }}
+          </button>
+        </form>
+      </div>
+      <div class="register-notice">
+        <p>{{ 'AUTH.LOGIN_PAGE.FIRST_TIME' | translate }}</p>
+        <a class="primary">{{ 'AUTH.LOGIN_PAGE.SIGN_UP' | translate }}</a>
+      </div>
+    </div>
   </div>
-  <button mat-button type="submit">{{ "AUTH.LOGIN" | translate }}</button>
-</form>
+</div>

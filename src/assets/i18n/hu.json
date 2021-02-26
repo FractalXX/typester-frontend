@@ -8,7 +8,15 @@
   },
   "AUTH": {
     "LOGIN": "Bejelentkezés",
-    "REGISTER": "Regisztráció"
+    "REGISTER": "Regisztráció",
+    "LOGIN_PAGE": {
+      "DESCRIPTION": "A gyors gépelés elsajátítására tervezve.",
+      "DESCRIPTION_2": "Haladj tovább az utadon.",
+      "WELCOME": "Üdvözlünk újra!",
+      "SIGN_IN": "Bejelentkezés",
+      "FIRST_TIME": "Először vagy itt?",
+      "SIGN_UP": "Akkor kezdjük a regisztrációval!"
+    }
   },
   "USER": {
     "USERNAME": "Felhasználónév",

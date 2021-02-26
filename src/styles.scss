@@ -3,9 +3,40 @@
 html,
 body {
   height: 100%;
+  background-color: $dark-background;
+  color: $light-text;
 }
 
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.card {
+  background-color: #444;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.accent {
+  color: var(--accent-color);
+}
+
+button {
+  &:not(.mat-button-disabled) {
+    &.mat-stroked-button {
+      border-color: var(--primary-color) !important;
+    }
+  }
+}
+
+.mat-form-field {
+  &.mat-form-field-should-float {
+    mat-icon {
+      color: var(--primary-color);
+    }
+  }
 }

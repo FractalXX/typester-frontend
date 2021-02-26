@@ -1,0 +1,76 @@
+@import "styles/material-theme.scss";
+
+.page-container {
+  overflow: auto;
+
+  .card.login {
+    margin: auto;
+    margin-top: 100px;
+    max-width: 800px;
+    height: 700px;
+    text-align: center;
+
+    .card-content {
+      margin-top: 82px;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 17px;
+    }
+
+    h1,
+    h2 {
+      color: #fff;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 0;
+
+      &.welcome-back {
+        margin-bottom: 44px;
+        font-size: 24px;
+      }
+    }
+
+    .welcome {
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      width: 463px;
+      background-image: url('/assets/images/login-image.png');
+      color: #fff;
+    }
+
+    .login {
+      padding: 0 44px 25px 20px;
+
+      form {
+        margin-top: 65px;
+        padding-left: 24px;
+
+        .login-button {
+          width: 100%;
+          margin: 0;
+          margin-top: 65px;
+        }
+      }
+
+      .register-notice {
+        text-align: left;
+        color: #fff;
+
+        p {
+          font-size: 24px;
+        }
+
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

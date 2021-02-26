@@ -1,8 +1,10 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  ElementRef,
   Input,
   OnInit,
+  ViewChild,
 } from '@angular/core';
 import { ControlValueAccessor, FormControl, NgControl } from '@angular/forms';
 import { keys as _keys } from 'lodash';
@@ -22,6 +24,10 @@ export class SimpleInputComponent
   @Input() hint: string;
   @Input() type: 'password' | 'number' | 'text' = 'text';
   @Input() required = false;
+  @Input() icon?: string;
+  @Input() iconType?: 'PREFIX' | 'SUFFIX';
+
+  @ViewChild('inputElement') inputElement: ElementRef;
 
   public internalControl = new FormControl();
 
@@ -44,6 +50,10 @@ export class SimpleInputComponent
         .pipe(distinctUntilChanged())
         .subscribe((value) => this.onChange(value)),
     );
+  }
+
+  focus(): void {
+    this.inputElement.nativeElement.focus();
   }
 
   writeValue(obj: any): void {
